@@ -1,0 +1,196 @@
+@import "fonts.css";
+
+:root {
+  --bg_light: hsl(202, 86%, 86%);
+  /* gradient */
+  --bg-gradient-onyx: linear-gradient(to bottom right,
+      hsl(185, 100%, 82%) 30%,
+      hsl(185, 69%, 61%) 70%
+      /* hsl(203, 94%, 56%) 70% */
+      /* hsl(211, 100%, 50%) 70% */
+    );
+  /* font family*/
+  --ft-cool: 'Avenir Next Cyr', 'Poppins', sans-serif;
+  --color: hsl(203, 100%, 42%);
+  --color1: #7CA148;
+  --color2: #FEE794;
+  --margin: 10%;
+}
+
+@media screen and (min-width: 450px) {
+  :root {
+    --width: 90%
+  }
+
+  ;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --width: 70%
+  }
+
+  ;
+}
+
+@media screen and (min-width: 1024px) {
+  :root {
+    --width: 60%
+  }
+
+  ;
+}
+
+@media screen and (min-width: 1250px) {
+  :root {
+    --width: 50%
+  }
+
+  ;
+}
+
+header {
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+body {
+  /* background-color: var(--bg_light); */
+  /* background-image: var(--bg-gradient-onyx); */
+  background-attachment: fixed;
+  /* background-repeat: no-repeat; */
+  /* background-size: cover;  */
+  font-family: 'Avenir Next Cyr';
+  margin-left: var(--margin);
+  margin-right: var(--margin);
+  margin-bottom: 10%;
+}
+
+hr {
+  border-color: var(--color2);
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+h1 {
+
+  /* font-family: 'Avenir Next Cyr';
+    font-weight: normal;
+    font-style: normal; */
+  font-family: 'canela';
+  text-align: center;
+  align-content: center;
+  color: var(--color1);
+}
+
+h2 {
+  font-family: 'canela';
+  text-align: left;
+  align-content: center;
+  color: var(--color1);
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+p {
+  text-align: justify;
+  align-content: center;
+  size: 12pt;
+  /* margin: 5%; */
+  /* margin: 3%; */
+}
+
+/* ul {
+  margin: 0;
+} */
+
+#carte {
+  width: var(--width);
+  background-color: rgba(255, 255, 255, 0.75);
+  /* text-align: center; */
+  /* align-content: center; */
+  border-radius: 5pt;
+  margin: 2%;
+  padding: 1%;
+}
+
+/* Style pour le bandeau de navigation */
+nav {
+  background-color: white;
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border-bottom: 1pt; */
+  /* padding: 0 15px; */
+}
+
+.logo {
+  font-family: 'canela';
+  color: var(--color1);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 14px 16px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+a {
+  color: var(--color1);
+}
+
+nav li a {
+  font-family: 'canela';
+  border-radius: 15pt;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  background-color: var(--color2);
+  /* color: white; */
+}
+
+/* Container grid */
+.container {
+  display: grid;
+  grid-template-areas:
+    /* "header ico" */
+    "content ico";
+  grid-template-columns: 5fr 1fr;
+  gap: 10pt;
+  /* background-color: dodgerblue; */
+  /* padding: 5px; */
+}
+
+.container div.header {
+  grid-area: header;
+}
+
+.container div.ico {
+  padding-top: 10pt;
+  grid-area: ico;
+  justify-content: center;
+  align-items: center;
+}
+
+.container div.ico img {
+  width: 100%;
+  border-radius: 10pt;
+  justify-content: center;
+  align-items: center;
+}
+
+.container div.content {
+  grid-area: content;
+}
